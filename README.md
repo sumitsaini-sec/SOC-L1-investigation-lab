@@ -1,21 +1,27 @@
-# SOC L1 Local Practice Lab
+# SOC L1 Investigation Lab v3
 
 A browser-based **SOC Level 1 investigation simulator** designed for cybersecurity students and junior SOC analysts. It runs locally with synthetic training data and does not require a backend or internet connection.
 
 ## Highlights
 
-- 560 synthetic alerts on first launch
+- 560 independently generated alerts across 16 detection scenarios
+- Unique timestamps, counts, IPs, users, hosts, risk scores, severity, event volume and evidence for every case
 - Persistent investigation progress using browser local storage
 - Add custom alerts from the dashboard
-- Search, severity/status filters and pagination
-- Investigation workflow with Overview, Timeline, Process Tree, Network, Authentication Logs and Threat Intelligence
+- Search plus severity, status and complexity filters
+- Investigation workflow with Overview, Timeline, Process, Network, Authentication, Intel/IP, Scope & Impact and Raw Logs
+- Investigation-readiness checklist that requires evidence review before case submission
+- Source/IOC reputation assessment, endpoint-impact assessment and compromise validation
+- Asset criticality, EDR state, identity privilege/MFA context and correlated blast radius
 - True Positive / False Positive / Needs More Investigation classification
-- L1 actions: escalate, close false positive, request enrichment or monitor
-- Analyst notes, decision scoring and investigation timestamps
+- Seven realistic L1 actions including containment, account disablement, IOC blocking, escalation and enrichment
+- Six-part decision scoring with evidence-based analyst notes
 - Investigation History page
 - Escalated Incidents page
-- MITRE ATT&CK training coverage
+- Detection Engineering view with rule performance, MITRE mapping, log-source health, coverage and ingestion latency
+- MITRE ATT&CK coverage generated from the live queue
 - Export/Import progress as JSON
+- Automatic upgrade of saved v2 cases with fresh v3 evidence
 - Fully client-side: HTML, CSS and vanilla JavaScript
 
 ## Run Locally
@@ -29,7 +35,7 @@ No npm install or database is required. The included local server launcher uses 
 
 ## Persistent Progress
 
-The app automatically stores the current alert queue, investigation decisions, notes and status changes in the browser using `localStorage`.
+The app automatically stores the current alert queue, evidence-review progress, investigation decisions, notes and status changes in the browser using `localStorage`.
 
 When you reopen the same project in the same browser/origin, investigated alerts remain investigated. For a portable backup, use **Export Progress** and later **Import Progress**.
 
@@ -63,13 +69,13 @@ All alerts, IP addresses, users, hosts and threat-intelligence results in this p
 
 ## Suggested Portfolio Description
 
-> Built a local SOC L1 investigation simulator with 500+ synthetic alerts, persistent case history, MITRE ATT&CK context, process/network/authentication evidence, analyst notes, incident escalation and decision scoring using HTML, CSS and vanilla JavaScript.
+> Built a local SOC L1 investigation simulator with 560 unique cases across 16 detection scenarios, IOC enrichment, endpoint and identity context, process/network/authentication/raw-log correlation, MITRE ATT&CK mapping, persistent case history and graded incident escalation using HTML, CSS and vanilla JavaScript.
 
 ## Future Ideas
 
 - CSV/Sysmon log import
-- Sigma-style detection rules
-- More incident scenarios
+- Sigma/YARA rule import
+- PCAP and EVTX training datasets
 - Case assignment and SLA timers
 - Light/dark themes
 - Optional backend for multi-user training

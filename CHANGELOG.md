@@ -1,5 +1,19 @@
 # Changelog
 
+## v3.0
+
+- Replaced repeated template evidence with independently generated case data
+- Added 16 alert scenarios and 560 unique cases
+- Varied failed-login counts, timestamps, severity, complexity, risk, event volume, entities and IOCs
+- Added source-IP/IOC enrichment, endpoint impact and compromise assessment
+- Added asset criticality, identity context, EDR posture and scope correlation
+- Added raw logs and richer process, network, authentication and timeline evidence
+- Added mandatory investigation-readiness workflow before case submission
+- Expanded scoring from 3 to 6 evidence-based decisions
+- Added Detection view for rule performance, MITRE mapping and log-source coverage
+- Added complexity filter, risk scores and dynamic telemetry health
+- Preserved local persistence, custom alerts, history, export/import and v2 progress migration
+
 ## v2.0
 
 - Added automatic persistent browser storage

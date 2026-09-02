@@ -1,7 +1,7 @@
 @echo off
 setlocal
 cd /d "%~dp0"
-echo Starting SOC L1 Local Practice Lab at http://localhost:8000
+echo Starting SOC L1 Investigation Lab v3 at http://localhost:8000
 start "" http://localhost:8000
 where py >nul 2>&1
 if %errorlevel%==0 (
